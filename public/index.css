@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', "Open Sans";
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CONTAINER NAV MENU*/
+
+.container-nav {
+    display: flex;
+    background-color: #000;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.container-nav .container-btns-menu {
+    display: none;
+}
+
+.container-nav .container-nav-menu {
+    display: flex;
+    max-height: 80px;
+}
+
+.container-nav-menu .container-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.container-nav a {
+    height: 80px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    color: #fff;
+}
+
+.container-nav .container-logo a {
+    padding-left: 0;
+}
+
+.container-nav-menu svg {
+    height: 40px;
+    width: 115px;
+}
+
+.container-nav-menu svg path {
+    fill: #fff;
+}
+
+.container-nav-menu .enlaces {
+    display: flex;
+}
+
+.container-nav .container-nav-login {
+    display: flex;
+}
+
+.container-nav .container-nav-login i {
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.container-nav .container-nav-login a {
+    margin: 20px 10px 20px 0;
+    padding: 0;
+    height: auto;
+}
