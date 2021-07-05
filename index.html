@@ -90,11 +90,11 @@
             </div>
 
             <div class="enlaces">
-                <a href="#">Products</a>
-                <a href="#">Solutions</a>
-                <a href="#">Support</a>
-                <a href="#">Security</a>
-                <a href="#">About Us</a>
+                <a href="#" data-categoria="products">Products</a>
+                <a href="#" data-categoria="solutions">Solutions</a>
+                <a href="#" data-categoria="support">Support</a>
+                <a href="#" data-categoria="security">Security</a>
+                <a href="#" data-categoria="aboutus">About Us</a>
             </div>
         </div>
 
@@ -102,6 +102,67 @@
             <a href="#">Sign In</a>
             <a href="#"><i class="fas fa-search"></i></a>
         </div>
+
+        
     </nav>
+    <div class="container-grid">
+        <div class="grid " id="grid">
+            <div class="categoria-menu" data-categoria="products">
+                <div class="enlaces">
+                    <a href="#" data-categoria="nas">NAS & IPS</a>
+                    <a href="#" data-categoria="surveillance">Surveillance</a>
+                    <a href="#" data-categoria="networking">Networking</a>
+                    <a href="#" data-categoria="cloud">Cloud²</a>
+                    <a href="#" data-categoria="">Storage & Adds-ons</a>
+                </div>          
+            </div>
+
+            <div class="container-subcategorias">
+                <div class="enlaces-subcategoria" data-categoria="nas">
+                    <div class="enlaces-subcategoria-cont">
+                        <button class="btn-regresar"><i class="fas fa-arrow-left"></i>Regresar</button>
+                        <h3 class="subcategorias-title">Tower Form Factor</h3>
+                        <a href="#" data-categoria="ds">DS - Desktop NAS</a>
+                    </div>
+
+                    <div class="enlaces-subcategoria-cont">
+                        <h3 class="subcategorias-title">Rackmount Servers</h3>
+                        <a href="#" data-categoria="fs">FS - All Flash Array</a>
+                        <a href="#" data-categoria="rs">RS - General Purpose</a>
+                        <a href="#" data-categoria="sa">SA - High Scalability</a>
+                        <a href="#" data-categoria="uc">UC - iSCSI/FC SAN</a>
+                    </div>
+                </div>
+
+                <div class="banner-subcategoria">
+                    <div class="container-subcategoria-img" data-categoria="ds">
+                        <a href="#">
+                            <img src="./images/tecnologia-banner-1.png" alt="1">
+                        </a>
+                    </div>
+                    <div class="container-subcategoria-img" data-categoria="fs">
+                        <a href="#">
+                            <img src="./images/tecnologia-banner-1.png" alt="2">
+                        </a>
+                    </div>
+                    <div class="container-subcategoria-img" data-categoria="rs">
+                        <a href="#">
+                            <img src="./images/tecnologia-banner-1.png" alt="3">
+                        </a>
+                    </div>
+                    <div class="container-subcategoria-img" data-categoria="sa">
+                        <a href="#">
+                            <img src="./images/tecnologia-banner-1.png" alt="4">
+                        </a>
+                    </div>
+                    <div class="container-subcategoria-img" data-categoria="uc">
+                        <a href="#">
+                            <img src="./images/tecnologia-banner-1.png" alt="5">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
