@@ -94,8 +94,7 @@ a {
     position: absolute;
     width: 100%;
     z-index: 1000;
-    display: grid;
-    /* display: none; */
+    display: none;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     grid-area: "categorias subcategorias";
@@ -165,6 +164,30 @@ a {
     font-size: 14px;
     line-height: 33px;
 }
+
+/* GALERIA SUBCATEGORIAS */
+
+.grid .banner-subcategorias {
+    background-color: #232f3e;
+    padding: 40px;
+}
+
+.grid .container-subcategorias-img {
+    width: 347px;
+    height: 155px;
+    display: none;
+}
+
+.grid .container-subcategorias-img.activo {
+    display: block;
+}
+
+.grid .container-subcategorias-img a, .grid  .container-subcategorias-img a  img {
+    width: 347px;
+    height: 155px;
+}
+
+
 
 
 
