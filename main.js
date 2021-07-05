@@ -23,7 +23,18 @@ document.querySelectorAll('#container-subcategorias .enlaces-subcategorias-cont 
 	elemento.addEventListener('mouseenter', (e) => {
         document.querySelectorAll('.container-subcategorias .banner-subcategorias .container-subcategorias-img').forEach((categoria) => {
             categoria.classList.remove('activo');
-            if(categoria.dataset.categoria == e.target.dataset.categoria){
+            if(categoria.dataset.categoria === e.target.dataset.categoria){
+                categoria.classList.add('activo');
+            }
+        });
+	});
+});
+
+document.querySelectorAll('#grid .enlaces a').forEach((elemento) => {
+	elemento.addEventListener('mouseenter', (e) => {
+        document.querySelectorAll('.container-subcategorias').forEach((categoria) => {
+            categoria.classList.remove('activo');
+            if(categoria.dataset.categoria === e.target.dataset.categoria){
                 categoria.classList.add('activo');
             }
         });

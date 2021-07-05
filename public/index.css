@@ -145,14 +145,19 @@ a {
     grid-area: "subcategorias";
 }
 
-.grid .container-subcategorias{
-    display: grid;
+.grid .container-subcategorias {
+    display: none;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 }
 
+.grid .container-subcategorias.activo {
+    display: grid;
+}
+
 .grid .enlaces-subcategorias-cont {
     margin: 40px;
+    /* display: none; */
 }
 
 .grid .enlaces-subcategorias a {
@@ -179,6 +184,10 @@ a {
 }
 
 .grid .container-subcategorias-img.activo {
+    display: block;
+}
+
+.grid #container-subcategorias-img-on {
     display: block;
 }
 
