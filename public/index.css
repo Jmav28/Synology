@@ -141,6 +141,10 @@ a {
     display: block;
 }
 
+.grid .categoria-menu .container-subcategorias a {
+    padding: 9px;
+} 
+
 .grid .categoria-menu a:hover {
     background-color: #f0f0f0;
     color: #000;
@@ -150,9 +154,9 @@ a {
 
 .grid .container-subcategorias {
     display: none;
-    grid-area: "subcategorias";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    width: 100%;
 }
 
 .grid .container-subcategorias.activo {
@@ -172,6 +176,12 @@ a {
 .grid .enlaces-subcategorias h3 {
     font-size: 14px;
     line-height: 33px;
+}
+
+.grid .categoria-menu .categoria-menu3 {
+    display: flex;
+    grid-area: "subcategorias";
+
 }
 
 /* GALERIA SUBCATEGORIAS */
@@ -226,8 +236,8 @@ a {
     width: 347px;
     height: 155px;
     position: relative;
-    top: -25px;
-    left: -40px;
+    top: -13px;
+    left: -9px;
 }
 
 

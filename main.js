@@ -20,7 +20,7 @@ btnNav.addEventListener('mouseover', () => {
     });
 });
 
-document.querySelectorAll('.grid .enlaces a').forEach((elemento) => {
+document.querySelectorAll('.grid .categoria-menu .enlaces a').forEach((elemento) => {
     elemento.addEventListener('mouseenter', (e) => {
         document.querySelectorAll('#grid .categoria-menu3 .container-subcategorias').forEach((categoria) => {
             categoria.classList.remove('activo');
