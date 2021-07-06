@@ -121,7 +121,6 @@ a {
 .grid .categoria-menu {
     grid-area: "categorias";
     min-height: 300px;
-    box-shadow: 0px 0px 6px rgba(0,0,0,.10);
     display: none;
     width: 100%;
     grid-template-columns: 1fr 2fr;
@@ -168,7 +167,7 @@ a {
     margin: 40px;
 }
 
-.grid .enlaces-subcategorias a {
+.grid .enlaces-subcategorias-cont a {
     display: block;
     padding: 9px;
 }
