@@ -98,6 +98,7 @@ a {
     grid-template-rows: 1fr;
     grid-area: "categorias subcategorias";
     box-shadow: 0px 3px 0px rgba(0,0,0,.10);
+    background-color: #fff;
 }
 
 .grid.activo {
@@ -239,7 +240,62 @@ a {
     left: -9px;
 }
 
+/* 
+..........................
+SLIDER....................
+..........................
+*/
 
+/* MAIN SLIDER */
 
+.container-slider {
+    width: 100%;
+    height: 500px;
+}
 
+.container-slider-ind.principal {
+    width: 100%;
+    height: 500px;
+    background-image: url(https://www.synology.com/img/homebanner/20201204_DSM70_beta/bg_xl.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.container-slider-ind.principal a {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-slider-ind.principal span {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    margin-top: 100px;
+}
+
+.container-slider-ind.principal p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+
+.container-slider-ind.principal button {
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    font-weight: 400px;
+    padding: 10px 35px;
+    background-color: #0067e6;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    margin: 20px 0;
+}
 
