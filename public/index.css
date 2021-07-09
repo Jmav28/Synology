@@ -44,7 +44,8 @@ a {
 }
 
 .container-nav .enlaces a:hover {
-    border-bottom: 5px solid #0067e5;
+    /* border-bottom: 5px solid #0067e5; */
+    text-decoration: underline 5px #0067e6;
 }
 
 .container-nav .container-logo a {
@@ -253,7 +254,7 @@ SLIDER....................
     height: 500px;
 }
 
-.container-slider-ind.principal {
+.container-slider-div.div1 {
     width: 100%;
     height: 500px;
     background-image: url(https://www.synology.com/img/homebanner/20201204_DSM70_beta/bg_xl.jpg);
@@ -299,3 +300,64 @@ SLIDER....................
     margin: 20px 0;
 }
 
+.container-slider-div.div2 {
+    width: 100%;
+    height: 500px;
+    background-image: url(https://www.synology.com/img/homebanner/20210310_RS2421RPplus_RS2821RPplus/bg_xl.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 60px 0 0 60px;
+}
+
+.container-slider-div .header-slider-cont h1 {
+    color: #fff;
+    font-size: 46px;
+    margin-bottom: 12px;
+    line-height: 54px;
+    font-weight: 700;
+}
+
+.container-slider-div .header-slider-cont p {
+    color: #fff;
+    font-size: 18px;
+    margin: 8px 0 30px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.container-slider-div .links-slider-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-slider-div .links-slider-cont a {
+    color: #fff;
+    font-size: 23px;
+    margin-bottom: 22px;
+}
+
+.container-slider-div .links-slider-cont a:hover i {
+    margin-left: 10px;
+    transition-duration: 0.2s;
+}
+
+.container-slider-div.div3 {
+    width: 100%;
+    height: 500px;
+    background-image: url(https://www.synology.com/img/homebanner/20210323_HDD_new_bg_without/bg_xl.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 60px 0 0 60px;
+}
+
+.container-slider-div.div4 {
+    width: 100%;
+    height: 500px;
+    background-image: url(https://www.synology.com/img/homebanner/20201221_ds1821plus_ds1621plus_rs1221rpplus/bg_xl.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 60px 0 0 60px;
+}
