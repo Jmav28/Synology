@@ -71,3 +71,14 @@ function slides(){
     }
 };
 
+document.querySelectorAll('.container-slider .btns-slider-container a').forEach((test) => {
+    test.addEventListener('click', (tst) => {
+        document.querySelectorAll('.container-slider .container-slider-div').forEach((idk) => {
+            if(idk.dataset.categoria == tst.target.dataset.categoria) {
+                counter = idk.dataset.categoria;
+            }
+        });
+    });
+});
+
+
