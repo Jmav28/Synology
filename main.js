@@ -1,6 +1,8 @@
 const btnNav = document.getElementById('btn-nav-enlaces'),
     grid = document.getElementById('grid'),
-    contNavMenu = document.getElementById('container-nav-menu');
+    contNavMenu = document.getElementById('container-nav-menu'),
+    btnTest = document.getElementById('btn-test');
+var counter = 1;
 
 btnNav.addEventListener('mouseover', () => {
     grid.classList.add('activo');
@@ -27,11 +29,12 @@ btnNav.addEventListener('mouseover', () => {
 });
 
 document.querySelectorAll('.grid .categoria-menu .enlaces a').forEach((elemento) => {
-    elemento.addEventListener('mouseenter', (e) => {
+    elemento.addEventListener('click', (e) => {
         document.querySelectorAll('#grid .categoria-menu3 .container-subcategorias').forEach((categoria) => {
             categoria.classList.remove('activo');
             if(categoria.dataset.categoria == e.target.dataset.categoria){
                 categoria.classList.add('activo');
+                // elemento.classList.add('activo');
             }
         });
     });
@@ -47,3 +50,11 @@ document.querySelectorAll('#grid .container-subcategorias .enlaces-subcategorias
         });
     });
 });
+
+
+// setInterval(function(){
+//     btnTest.onclick(
+
+//     );
+//     document.getElementById('div' + counter).addEventListener
+// });

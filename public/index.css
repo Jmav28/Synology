@@ -151,6 +151,11 @@ a {
     color: #000;
 }
 
+.grid .categoria-menu a.activo {
+    background-color: #0067e6;
+    color: #fff;
+}
+
 /* SUBCATEGORIAS */
 
 .grid .container-subcategorias {
@@ -254,6 +259,10 @@ SLIDER....................
     height: 500px;
 }
 
+.container-slider-ind {
+    position: relative;
+}
+
 .container-slider-div.div1 {
     width: 100%;
     height: 500px;
@@ -261,6 +270,10 @@ SLIDER....................
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    z-index: 1;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .container-slider-ind.principal a {
@@ -308,6 +321,10 @@ SLIDER....................
     background-position: center top;
     background-repeat: no-repeat;
     padding: 60px 0 0 60px;
+    z-index: 1;
+    position: absolute;
+    opacity: 0;    
+    transition: opacity 0.4s ease-in-out;
 }
 
 .container-slider-div .header-slider-cont h1 {
@@ -350,6 +367,10 @@ SLIDER....................
     background-position: center top;
     background-repeat: no-repeat;
     padding: 60px 0 0 60px;
+    z-index: 1;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .container-slider-div.div4 {
@@ -360,4 +381,13 @@ SLIDER....................
     background-position: center top;
     background-repeat: no-repeat;
     padding: 60px 0 0 60px;
+    z-index: 1;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.container-slider-div.activo {
+    opacity: 1;
+    z-index: 2;
 }
