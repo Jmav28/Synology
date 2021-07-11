@@ -464,8 +464,22 @@ SLIDER....................
     background-size: 105% auto;
 }
 
+.container-newscards .card-container a:hover .card-caption {
+    background-size: 105% auto;
+    top: -5%;
+}
+
 .card-container .card-caption {
     background-color: #fff;
     padding: 30px 40px;
-    
+    z-index: 3;
+    text-align: center;
+    position: relative;
+    color: #2e3742;
+    top: 0;
+    transition: all .2s ease-in-out;
+}
+
+.card-container .card-caption p {
+    margin: 8px 0 16px 0;
 }
