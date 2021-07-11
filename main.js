@@ -2,7 +2,8 @@ const btnNav = document.getElementById('btn-nav-enlaces'),
     grid = document.getElementById('grid'),
     contNavMenu = document.getElementById('container-nav-menu'),
     btnTest = document.getElementById('btn-test');
-var counter = 1;
+var counter = 1,
+    intervalo = 3000;
 
 btnNav.addEventListener('mouseover', () => {
     grid.classList.add('activo');
@@ -51,10 +52,22 @@ document.querySelectorAll('#grid .container-subcategorias .enlaces-subcategorias
     });
 });
 
+// SLIDER
 
-// setInterval(function(){
-//     btnTest.onclick(
+setInterval(function(){
+    slides();
+}, intervalo);
 
-//     );
-//     document.getElementById('div' + counter).addEventListener
-// });
+function slides(){
+    document.querySelectorAll('.container-slider .container-slider-div').forEach((objt) => {
+        objt.classList.remove('activo');
+        if(objt.dataset.categoria == counter) {
+            objt.classList.add('activo');
+        }
+    }); 
+    counter++;
+    if(counter > 4) {
+        counter = 1;
+    }
+};
+
