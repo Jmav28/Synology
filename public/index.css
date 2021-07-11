@@ -44,8 +44,7 @@ a {
 }
 
 .container-nav .enlaces a:hover {
-    /* border-bottom: 5px solid #0067e5; */
-    text-decoration: underline 5px #0067e6;
+    border-bottom: 5px solid #0067e5;
 }
 
 .container-nav .container-logo a {
@@ -418,4 +417,20 @@ SLIDER....................
 .btns-slider-container a.activo {
     background-color: #0067e6;
     color: #0067e6;
+}
+
+/* NEWS CARDS */
+
+.container-newscards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 4px;
+    margin: 4px;
+}
+
+.container-newscards .card-container {
+    width: 330px;
+    height: 337px;
+    overflow: hidden;
 }

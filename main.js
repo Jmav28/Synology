@@ -3,7 +3,7 @@ const btnNav = document.getElementById('btn-nav-enlaces'),
     contNavMenu = document.getElementById('container-nav-menu'),
     btnTest = document.getElementById('btn-test');
 var counter = 1,
-    intervalo = 3000;
+    intervalo = 4000;
 
 btnNav.addEventListener('mouseover', () => {
     grid.classList.add('activo');
