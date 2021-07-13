@@ -525,6 +525,7 @@ SLIDER....................
     background-color: #25292d;
     border-radius: 120px;
     transition: background-color .3s ease;
+    margin: 0 auto;
 }
 
 .service-img-cont:hover {
@@ -534,4 +535,5 @@ SLIDER....................
 .service-ind-container a p {
     margin-top: 26px;
     color: #fff;
+    text-align: center;
 }
