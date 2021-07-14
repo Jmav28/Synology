@@ -574,3 +574,40 @@ SLIDER....................
 
 /* FOOTER */
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 80px;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: row;
+    padding: 12px 12px 12px 0;
+}
+
+.container-footer .container-inner {
+    display: flex;
+    justify-content: center;
+}
+
+.container-footer p {
+    font-size: 12px;
+    margin-right: 20px;
+}
+
+.container-footer a {
+    font-size: 12px;
+    border-left: .67px solid #000;
+    padding: 0 5px;
+}
+
+#border-eraser {
+    border: none;
+} 
+
+.container-footer1 ul {
+    list-style: none;
+    display: flex;
+
+}
