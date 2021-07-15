@@ -15,17 +15,10 @@ a {
 .container-nav {
     display: flex;
     background-color: #000;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-.container-nav .container-btns-menu {
-    display: none;
 }
 
 .container-nav .container-nav-menu {
     display: flex;
-    max-height: 80px;
 }
 
 .container-nav-menu .container-logo {
@@ -34,7 +27,8 @@ a {
   align-items: center;  
 }
 
-.container-nav a {
+
+.container-nav .container-nav-menu1 a {
     height: 80px;
     display: flex;
     padding: 20px 10px;
@@ -61,13 +55,7 @@ a {
     fill: #fff;
 }
 
-.container-nav-menu .enlaces {
-    display: flex;
-}
 
-.container-nav .container-nav-login {
-    display: flex;
-}
 
 .container-nav .container-nav-login i {
     font-size: 20px;
@@ -502,6 +490,7 @@ SLIDER....................
 
 .services-body-container {
     display: flex;
+    flex-flow: row wrap;
     padding: 0 80px;
     justify-content: space-between;
     max-width: 2000px;
@@ -534,6 +523,7 @@ SLIDER....................
 
 .service-ind-container a p {
     margin-top: 26px;
+    margin-bottom: 20px;
     color: #fff;
     text-align: center;
 }
@@ -643,14 +633,81 @@ footer {
 /* RESPONSIVE */
 
 @media screen and (min-width: 320px) {
+    .container-nav {
+        justify-content: space-between;
+        padding: 0;
+    }
     
+    .container-nav .container-btns-menu {
+        display: block;
+        margin: auto 0;
+    }
+
+    #btn-menu-cerrar {
+        display: none;
+    }
+
+    #btn-menu-cerrar.activo {
+        display: block;
+    }
+
+    .container-nav .container-btns-menu  button {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+    }
+
+    .container-nav-menu1 {
+        display: none;
+        position: absolute;
+    }
+
+    .container-nav-menu1.activo {
+        display: block;
+        width: 100%;
+        height: 90vh;
+        background-color: #1c2024;
+        z-index: 100;
+    }
+
+
+    .container-nav .container-nav-menu {
+        max-height: 50px;
+    }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
+    .container-nav {
+        padding: 0 20px;
+    }
 
-}
+    .container-nav .container-btns-menu {
+        display: none;
+    }
 
-@media screen and (min-width: 1024px) {
+    .container-nav-menu1 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container-nav-menu1 .enlaces {
+        display: flex;
+        position: initial;
+    }
+    
+    .container-nav .container-nav-login {
+        display: flex;
+        position: initial;
+    }
+
+    .container-nav .container-nav-menu {
+        max-height: 80px;
+    }
+
+
+
     .btns-slider-container {
         margin-left: 50%;
         left: -60px;   
@@ -663,6 +720,10 @@ footer {
 }
 
 @media screen and (min-width:1440px) {
+    .container-nav .container-btns-menu {
+        display: none;
+    }
+    
     .btns-slider-container {
         margin-left: 40px;
         left: 0;
@@ -672,4 +733,6 @@ footer {
         display: flex;
         flex-direction: row;
     }
+
+
 }
