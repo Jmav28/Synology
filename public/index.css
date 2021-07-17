@@ -65,7 +65,6 @@ a {
 }
 
 .container-nav .container-nav-login a {
-    margin: 20px 10px 20px 0;
     padding: 0;
     height: auto;
 }
@@ -108,11 +107,9 @@ a {
 }
 
 .grid .categoria-menu {
-    grid-area: "categorias";
     min-height: 300px;
     display: none;
     width: 100%;
-    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
 }
 
@@ -147,7 +144,6 @@ a {
 
 .grid .container-subcategorias {
     display: none;
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     width: 100%;
 }
@@ -167,14 +163,11 @@ a {
 }
 
 .grid .enlaces-subcategorias h3 {
-    font-size: 14px;
     line-height: 33px;
 }
 
 .grid .categoria-menu .categoria-menu3 {
     display: flex;
-    grid-area: "subcategorias";
-
 }
 
 /* GALERIA SUBCATEGORIAS */
@@ -635,20 +628,13 @@ footer {
 @media screen and (min-width: 320px) {
     .container-nav {
         justify-content: space-between;
-        padding: 0;
+        padding: 0 20px;
+        max-height: 50px;
     }
     
     .container-nav .container-btns-menu {
         display: block;
         margin: auto 0;
-    }
-
-    #btn-menu-cerrar {
-        display: none;
-    }
-
-    #btn-menu-cerrar.activo {
-        display: block;
     }
 
     .container-nav .container-btns-menu  button {
@@ -661,25 +647,77 @@ footer {
     .container-nav-menu1 {
         display: none;
         position: absolute;
+        left: 100%;
+    }
+
+    .container-nav-menu1 a {
+        justify-content: center;
+        font-size: 24px;
+    }
+
+    .container-nav-menu1 .enlaces a {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .container-nav-menu1 .enlaces:first-child {
+        border-top: 1px solid #ccc;
     }
 
     .container-nav-menu1.activo {
-        display: block;
+        display: flex;
+        flex-direction: column-reverse;
         width: 100%;
-        height: 90vh;
+        height: 100%;
         background-color: #1c2024;
         z-index: 100;
+        left: 0px;
     }
 
+    .container-nav .container-nav-login {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+        position: relative;
+        height: 150px;
+        justify-content: space-around;
+    }
 
-    .container-nav .container-nav-menu {
-        max-height: 50px;
+    .container-nav .container-nav-login a {
+        margin: 0 10px;
+    }
+
+    .grid {
+        top: -80px;
+    }
+
+    .grid .categoria-menu {
+        grid-template-columns: 1fr;
+    }
+
+    .grid .categoria-menu a {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .grid .banner-subcategorias {
+        display: none;
+    }
+
+    .grid .container-subcategorias {
+        grid-template-columns: 1fr;
+    }
+
+    .grid .enlaces-subcategorias h3 {
+        font-size: 20px;
+        text-align: center;
     }
 }
 
 @media screen and (min-width: 769px) {
     .container-nav {
         padding: 0 20px;
+        max-height: 80px;
+
     }
 
     .container-nav .container-btns-menu {
@@ -689,28 +727,65 @@ footer {
     .container-nav-menu1 {
         width: 100%;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+        position: initial;
+    }
+
+    .container-nav-menu1.activo {
+        display: none;
     }
 
     .container-nav-menu1 .enlaces {
         display: flex;
         position: initial;
     }
+
+    .container-nav-menu1 .enlaces:first-child {
+        border-top: none;
+    }
     
     .container-nav .container-nav-login {
         display: flex;
+        flex-direction: row;
+        padding: 0;
         position: initial;
+        height: auto;
     }
 
-    .container-nav .container-nav-menu {
-        max-height: 80px;
+    .container-nav .container-nav-login a {
+        margin: 20px 10px 20px 0;
     }
-
-
 
     .btns-slider-container {
         margin-left: 50%;
         left: -60px;   
+    }
+
+    .grid {
+        top: 0;
+    }
+
+    .grid .categoria-menu {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .grid .categoria-menu a {
+        text-align: initial;
+        font-size: 16px;
+    }
+
+    .grid .container-subcategorias {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid .enlaces-subcategorias h3 {
+        font-size: 14px;
+        text-align: initial;
+    }
+
+    .grid .banner-subcategorias {
+        display: block;
     }
 
     .container-footer {
