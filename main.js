@@ -1,12 +1,16 @@
 const btnNav = document.getElementById('btn-nav-enlaces'),
     grid = document.getElementById('grid'),
     contNavMenu = document.getElementById('container-nav-menu'),
-    btnTest = document.getElementById('btn-test');
+    btnTest = document.getElementById('btn-test'),
+    enlacesNabPrin = document.querySelector('#container-nav .container-nav-menu1'),
+    esMovil = () => window.innerWidth <= 768;
 var counter = 1,
     intervalo = 4000;
 
 btnNav.addEventListener('mouseover', () => {
-    grid.classList.add('activo');
+    if(!esMovil()){
+        grid.classList.add('activo');
+    }
 
     document.querySelectorAll('.container-nav .enlaces a').forEach((elemento1) => {
         elemento1.addEventListener('mouseenter', (ee) => {
@@ -25,30 +29,36 @@ btnNav.addEventListener('mouseover', () => {
         });
     });
     grid.addEventListener('mouseleave', () => {
-        grid.classList.remove('activo');
+        if(!esMovil()) {
+            grid.classList.remove('activo');
+        }
     });
 });
 
 document.querySelectorAll('.grid .categoria-menu .enlaces a').forEach((elemento) => {
     elemento.addEventListener('click', (e) => {
-        document.querySelectorAll('#grid .categoria-menu3 .container-subcategorias').forEach((categoria) => {
-            categoria.classList.remove('activo');
-            if(categoria.dataset.categoria == e.target.dataset.categoria){
-                categoria.classList.add('activo');
-                // elemento.classList.add('activo');
-            }
-        });
+        if(!esMovil()){
+            document.querySelectorAll('#grid .categoria-menu3 .container-subcategorias').forEach((categoria) => {
+                categoria.classList.remove('activo');
+                if(categoria.dataset.categoria == e.target.dataset.categoria){
+                    categoria.classList.add('activo');
+                    // elemento.classList.add('activo');
+                }
+            });
+        }
     });
 });
 
 document.querySelectorAll('#grid .container-subcategorias .enlaces-subcategorias-cont a').forEach((elemento) => {
     elemento.addEventListener('mouseenter', (e) => {
-        document.querySelectorAll('#grid .banner-subcategorias .container-subcategorias-img').forEach((categoria) => {
-            categoria.classList.remove('activo');
-            if(categoria.dataset.categoria == e.target.dataset.categoria){
-                categoria.classList.add('activo');
-            }
-        });
+        if(!esMovil()) {
+            document.querySelectorAll('#grid .banner-subcategorias .container-subcategorias-img').forEach((categoria) => {
+                categoria.classList.remove('activo');
+                if(categoria.dataset.categoria == e.target.dataset.categoria){
+                    categoria.classList.add('activo');
+                }
+            });
+        }
     });
 });
 
@@ -82,3 +92,16 @@ document.querySelectorAll('.container-slider .btns-slider-container a').forEach(
 });
 
 
+// CODIGO PARA MOBILE
+
+document.querySelector('#btn-menu-barras').addEventListener('click', (e) => {
+    e.preventDefault();
+    enlacesNabPrin.classList.add('activo');
+	document.querySelector('body').style.overflow = 'hidden';
+});
+
+document.querySelector('#btn-menu-regresar').addEventListener('click', (eee) => {
+    eee.preventDefault();
+    enlacesNabPrin.classList.remove('activo');
+    document.querySelector('body').style.overflow = 'visible';
+});

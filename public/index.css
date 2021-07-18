@@ -644,6 +644,17 @@ footer {
         font-size: 20px;
     }
 
+    #btn-menu-regresar {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+        position: absolute;
+        left: 94.5%;
+        bottom: 92%;
+        z-index: 1001;
+    }
+
     .container-nav-menu1 {
         display: none;
         position: absolute;
