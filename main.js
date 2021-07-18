@@ -40,9 +40,10 @@ document.querySelectorAll('.grid .categoria-menu .enlaces a').forEach((elemento)
         if(!esMovil()){
             document.querySelectorAll('#grid .categoria-menu3 .container-subcategorias').forEach((categoria) => {
                 categoria.classList.remove('activo');
-                if(categoria.dataset.categoria == e.target.dataset.categoria){
-                    categoria.classList.add('activo');
-                    // elemento.classList.add('activo');
+                if(!esMovil()) {
+                    if(categoria.dataset.categoria == e.target.dataset.categoria){
+                        categoria.classList.add('activo');
+                    }
                 }
             });
         }
@@ -94,6 +95,8 @@ document.querySelectorAll('.container-slider .btns-slider-container a').forEach(
 
 // CODIGO PARA MOBILE
 
+// botones para abrir y cerrar principal
+
 document.querySelector('#btn-menu-barras').addEventListener('click', (e) => {
     e.preventDefault();
     enlacesNabPrin.classList.add('activo');
@@ -104,4 +107,32 @@ document.querySelector('#btn-menu-regresar').addEventListener('click', (eee) => 
     eee.preventDefault();
     enlacesNabPrin.classList.remove('activo');
     document.querySelector('body').style.overflow = 'visible';
+});
+
+// evento para abrir el primer menu de categorias
+
+document.querySelectorAll('.container-nav .container-nav-menu1 .enlaces a').forEach((elemento) => {
+    elemento.addEventListener('click', (e) => {
+        document.querySelectorAll('#grid .categoria-menu').forEach((categoria) => {
+            categoria.classList.remove('activo');
+            document.querySelector('#grid .categoria-menu3 .container-subcategorias').classList.remove('activo');
+            if(categoria.dataset.categoria == e.target.dataset.categoria){
+                grid.classList.add('activo');
+                categoria.classList.add('activo');
+                document.querySelectorAll('#grid .categoria-menu3 .container-subcategorias').forEach((categoria) => {
+                    categoria.classList.remove('activo');
+                });
+            }
+        });
+    });
+});
+
+// evento para cerrar categorias y volver al nav principal
+
+document.querySelectorAll('#grid .categoria-menu .btn-menu-regresar').forEach((evento) => {
+    evento.addEventListener('click', (e) => {
+        e.preventDefault();
+        grid.classList.remove('activo');
+        categoria.classList.remove('activo');
+    });
 });

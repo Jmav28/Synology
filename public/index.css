@@ -83,9 +83,7 @@ a {
     display: none;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    grid-area: "categorias subcategorias";
     box-shadow: 0px 3px 0px rgba(0,0,0,.10);
-    background-color: #fff;
 }
 
 .grid.activo {
@@ -403,8 +401,6 @@ SLIDER....................
 
 .container-newscards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
     gap: 4px;
     margin: 4px;
 }
@@ -483,8 +479,6 @@ SLIDER....................
 
 .services-body-container {
     display: flex;
-    flex-flow: row wrap;
-    padding: 0 80px;
     justify-content: space-between;
     max-width: 2000px;
     margin: 0 auto;
@@ -531,8 +525,6 @@ SLIDER....................
 
 .container-info-section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
     padding: 77px 80px 60px 80px;
     gap: 40px;
 }
@@ -557,16 +549,13 @@ SLIDER....................
 /* FOOTER */
 
 footer {
-    display: flex;
+    
     justify-content: space-between;
-    margin: 0 80px;
     border-top: .5px solid #1c2024;
 }
 
 .container-footer {
     display: flex;
-    flex-direction: row;
-    padding: 12px 12px 12px 0;
 }
 
 .container-footer .container-inner {
@@ -576,7 +565,6 @@ footer {
 
 .container-footer p {
     font-size: 12px;
-    margin-right: 20px;
     line-height: 24px;
 }
 
@@ -655,10 +643,35 @@ footer {
         z-index: 1001;
     }
 
-    .container-nav-menu1 {
-        display: none;
+    .btn-menu-regresar {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
         position: absolute;
+        left: 94.5%;
+        top: 9vh;
+        z-index: 10010;
+    }
+
+    .container-nav-menu1 {
+        position: fixed;
         left: 100%;
+        transition: all .3s ease-out;
+        background-color: #1c2024;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-nav-menu1.activo {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #1c2024;
+        z-index: 100;
+        left: 0px;
+        transition: all .3s ease-out;
+
     }
 
     .container-nav-menu1 a {
@@ -674,15 +687,6 @@ footer {
         border-top: 1px solid #ccc;
     }
 
-    .container-nav-menu1.activo {
-        display: flex;
-        flex-direction: column-reverse;
-        width: 100%;
-        height: 100%;
-        background-color: #1c2024;
-        z-index: 100;
-        left: 0px;
-    }
 
     .container-nav .container-nav-login {
         display: flex;
@@ -699,6 +703,9 @@ footer {
 
     .grid {
         top: -80px;
+        background-color: #32373a;
+        box-shadow: 0px 5px 0px rgba(0,0,0,.10);
+        position: relative;
     }
 
     .grid .categoria-menu {
@@ -708,6 +715,12 @@ footer {
     .grid .categoria-menu a {
         text-align: center;
         font-size: 24px;
+        color: #fff;
+        border-bottom: 1px solid;
+    }
+
+    .grid .categoria-menu .categoria-menu3 {
+        margin: 0 auto;
     }
 
     .grid .banner-subcategorias {
@@ -722,6 +735,64 @@ footer {
         font-size: 20px;
         text-align: center;
     }
+
+    .container-newscards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .services-body-container {
+        padding: 0 15px;
+        flex-flow: row wrap;
+    }
+
+    .container-info-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    footer {
+        margin: 0 40px;
+        display: block;
+    }
+
+    footer .container-footer {
+        flex-direction: column;
+        padding: 12px 0;
+    }
+
+}
+
+@media screen and (min-width:480px) {
+    .container-newscards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .container-info-section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .services-body-container {
+        padding: 0 40px;
+        flex-flow: row wrap;
+    }
+
+    footer {
+        margin: 0 60px;
+    }
+
+    footer .container-footer {
+        flex-direction: row;
+    }
+
+    .container-footer p {
+        margin-right: 0;
+    }
+    
 }
 
 @media screen and (min-width: 769px) {
@@ -775,6 +846,7 @@ footer {
 
     .grid {
         top: 0;
+        background-color: #fff;
     }
 
     .grid .categoria-menu {
@@ -784,6 +856,10 @@ footer {
     .grid .categoria-menu a {
         text-align: initial;
         font-size: 16px;
+    }
+
+    .grid .categoria-menu .categoria-menu3 {
+        margin: 0;
     }
 
     .grid .container-subcategorias {
@@ -799,9 +875,34 @@ footer {
         display: block;
     }
 
-    .container-footer {
+    .container-newscards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .services-body-container {
+        padding: 0 80px;
+        flex-flow: row nowrap;
+    }
+
+    .container-info-section {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    footer {
+        margin: 0 80px;
         display: flex;
-        flex-direction: column;
+    }
+
+    footer .container-footer {
+        flex-direction: row;
+        padding: 12px 12px 12px 0;
+    }
+
+    .container-footer p {
+        margin-right: 20px;
     }
 }
 
