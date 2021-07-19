@@ -263,7 +263,6 @@ SLIDER....................
 
 .container-slider-ind.principal span {
     color: #fff;
-    font-size: 40px;
     font-weight: 900;
     margin-bottom: 25px;
     margin-top: 100px;
@@ -307,7 +306,6 @@ SLIDER....................
 
 .container-slider-div .header-slider-cont h1 {
     color: #fff;
-    font-size: 46px;
     margin-bottom: 12px;
     line-height: 54px;
     font-weight: 700;
@@ -735,6 +733,14 @@ footer {
         text-align: center;
     }
 
+    .container-slider-ind.principal span {
+        font-size: 30px;
+    }
+
+    .container-slider-div .header-slider-cont h1 {
+        font-size: 30px;
+    }
+
     .container-newscards {
         display: grid;
         grid-template-columns: 1fr;
@@ -742,7 +748,7 @@ footer {
     }
 
     .services-body-container {
-        padding: 0 15px;
+        padding: 0 10px;
         flex-flow: row wrap;
     }
 
@@ -794,7 +800,7 @@ footer {
     
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 907px) {
     .container-nav {
         padding: 0 20px;
         max-height: 80px;
@@ -891,6 +897,14 @@ footer {
         display: block;
     }
 
+    .container-slider-ind.principal span {
+        font-size: 40px;
+    }
+
+    .container-slider-div .header-slider-cont h1 {
+        font-size: 40px;
+    }
+
     .container-newscards {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -898,8 +912,7 @@ footer {
     }
 
     .services-body-container {
-        padding: 0 80px;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
     }
 
     .container-info-section {
@@ -920,6 +933,8 @@ footer {
     .container-footer p {
         margin-right: 20px;
     }
+
+    
 }
 
 @media screen and (min-width:1440px) {
@@ -937,5 +952,8 @@ footer {
         flex-direction: row;
     }
 
-
+    .services-body-container {
+        padding: 0 80px;
+        flex-flow: row nowrap;
+    }
 }
