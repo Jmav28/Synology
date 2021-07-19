@@ -77,7 +77,6 @@ a {
 }
 
 .grid {
-    position: absolute;
     width: 100%;
     z-index: 1000;
     display: none;
@@ -806,12 +805,21 @@ footer {
         display: none;
     }
 
+    #btn-menu-regresar {
+        display: none;
+    }
+
+    .btn-menu-regresar {
+        display: none;
+    }
+
     .container-nav-menu1 {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         position: initial;
+        background-color: transparent;
     }
 
     .container-nav-menu1.activo {
@@ -821,6 +829,10 @@ footer {
     .container-nav-menu1 .enlaces {
         display: flex;
         position: initial;
+    }
+
+    .container-nav-menu1 .enlaces a {
+        border: none;
     }
 
     .container-nav-menu1 .enlaces:first-child {
@@ -847,6 +859,8 @@ footer {
     .grid {
         top: 0;
         background-color: #fff;
+        position: absolute;
+
     }
 
     .grid .categoria-menu {
@@ -856,6 +870,8 @@ footer {
     .grid .categoria-menu a {
         text-align: initial;
         font-size: 16px;
+        color: #000;
+        border: none;
     }
 
     .grid .categoria-menu .categoria-menu3 {
