@@ -296,7 +296,6 @@ SLIDER....................
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    padding: 60px 0 0 60px;
     z-index: 1;
     position: absolute;
     opacity: 0;    
@@ -342,7 +341,6 @@ SLIDER....................
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    padding: 60px 0 0 60px;
     z-index: 1;
     position: absolute;
     opacity: 0;
@@ -357,7 +355,6 @@ SLIDER....................
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    padding: 60px 0 0 60px;
     z-index: 1;
     position: absolute;
     opacity: 0;
@@ -733,6 +730,14 @@ footer {
         text-align: center;
     }
 
+    .container-slider-div {
+        padding: 60px 20px 0 20px;
+    }
+
+    .container-slider-div.div1 {
+        padding: 0 20px;
+    }
+
     .container-slider-ind.principal span {
         font-size: 30px;
     }
@@ -797,7 +802,6 @@ footer {
     .container-footer p {
         margin-right: 0;
     }
-    
 }
 
 @media screen and (min-width: 907px) {
@@ -895,6 +899,14 @@ footer {
 
     .grid .banner-subcategorias {
         display: block;
+    }
+
+    .container-slider-div {
+        padding: 60px 0 0 60px;
+    }
+
+    .container-slider-div.div1 {
+        padding: none;
     }
 
     .container-slider-ind.principal span {
