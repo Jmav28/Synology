@@ -654,8 +654,8 @@ footer {
         transition: all .3s ease-out;
         background-color: #1c2024;
         z-index: 100;
-        width: 100%;
-        height: 100%;
+        max-width: 0px;
+        overflow: hidden;
     }
 
     .container-nav-menu1.activo {
@@ -664,8 +664,10 @@ footer {
         background-color: #1c2024;
         z-index: 100;
         left: 0px;
-        transition: all .3s ease-out;
-
+        transition: left .3s ease-out;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
     }
 
     .container-nav-menu1 a {
@@ -830,6 +832,7 @@ footer {
         justify-content: space-between;
         position: initial;
         background-color: transparent;
+        max-width: initial;
     }
 
     .container-nav-menu1.activo {
